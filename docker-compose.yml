@@ -5,8 +5,8 @@ services:
     build: .
     volumes: &web-volumes
       - &app-volume .:/task_manager:cached
-      - ~/.ssh:/root/.ssh
-      - ~/.bash_history:/root/.bash_history
+      # - ~/.ssh:/root/.ssh
+      # - ~/.bash_history:/root/.bash_history
       - &bundle-cache-volume bundle_cache:/bundle_cache
     ports:
       - 3000:3000
